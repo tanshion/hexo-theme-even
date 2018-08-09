@@ -11,12 +11,12 @@
     {% endfor %}
     
     {% if config.feed and config.feed.path and theme.rss === 'default' %}
-      <a href="{{ url_for(config.feed.path) }}" class="iconfont icon-rss" title="rss" target="_blank"></a>
+      <a target="view_window" href="{{ url_for(config.feed.path) }}" class="iconfont icon-rss" title="rss"></a>
     {% elif theme.rss === 'default' %}
       {% set rss_link = config.feed.path || 'atom.xml' %}
-      <a href="{{ url_for(rss_link) }}" class="iconfont icon-rss" title="rss" target="_blank"></a>
+      <a target="view_window" href="{{ url_for(rss_link) }}" class="iconfont icon-rss" title="rss"></a>
     {% elif theme.rss %}
-      <a href="{{ url_for(theme.rss) }}" class="iconfont icon-rss" title="rss" target="_blank"></a>
+      <a target="view_window" href="{{ url_for(theme.rss) }}" class="iconfont icon-rss" title="rss"></a>
     {% endif %}
   </div>
 {% endif %}
